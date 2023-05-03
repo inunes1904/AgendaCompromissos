@@ -1,5 +1,4 @@
 public class Compromisso {
-
   private String nome;
   private Data dataInicio;
   private Data dataTermino;
@@ -24,6 +23,7 @@ public class Compromisso {
     this.dataTermino =  new Data(diaDataFinal, mesDataFinal, anoDataFinal);
     this.horarioInicio = new Horario(horaInicial,minutosInicial);
     this.horarioTermino = new Horario(horaTermino, minutosTermino);
+    Agenda.addCompromisso(this);
   }
 
   public String getNome() {

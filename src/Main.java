@@ -7,9 +7,16 @@ public class Main {
         new Horario( 9, 15),  new Horario( 9, 45)
     );
 
+    Menu m = new Menu();
 
-    Agenda.imprimirCompromissos();
-
+    System.out.println("----------------------------------------");
+    System.out.println("--           Volte Sempre!            --");
+    System.out.println("--                                    --");
+    System.out.println("--               O   O                --");
+    System.out.println("--                 o                  --");
+    System.out.println("--            <_________>             --");
+    System.out.println("--                                    --");
+    System.out.println("----------------------------------------");
   }
 
 }
