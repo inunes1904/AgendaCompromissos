@@ -48,7 +48,7 @@ public class Data {
 
   }
 
-  boolean bissexto(int ano) {
+  public boolean bissexto(int ano) {
     return (ano % 400 == 0) || ((ano % 100 != 0) && (ano % 4 == 0));
   }
 

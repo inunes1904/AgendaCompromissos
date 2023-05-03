@@ -5,8 +5,18 @@ public class Horario {
 
 
   public Horario(int hora, int minuto) {
-    this.hora = hora;
-    this.minuto = minuto;
+    if (verificarHorario(hora,minuto)) {
+      this.hora = hora;
+      this.minuto = minuto;
+    }else{
+      System.out.println("Horário é inválido");
+    }
+  }
+
+  private boolean verificarHorario(int hora, int minuto) {
+    if (hora >= 0 && hora <= 23 &&
+      minuto >= 0 && minuto <= 59) return true;
+    return false;
   }
 
   public int getHora() {
