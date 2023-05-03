@@ -1,19 +1,16 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Agenda {
 
-  public final List<Compromisso> listaCompromissos;
+  public static final List<Compromisso> listaCompromissos = new ArrayList<>();
 
-
-  public Agenda(List<Compromisso> listaCompromissos) {
-    this.listaCompromissos = listaCompromissos;
+  // falta verificar se existe conflito
+  public static void addCompromisso(Compromisso comp){
+      listaCompromissos.add(comp);
   }
 
-  public void addCompromisso(Compromisso comp){
-
-  }
-
-  public void imprimirCompromissos() {
+  public static void imprimirCompromissos() {
     System.out.println("Lista de Compromissos:");
     System.out.println("_________________________________");
     for (Compromisso c: listaCompromissos) {
@@ -26,9 +23,9 @@ public class Agenda {
       System.out.println(c.getDataTermino().getDia()+"/"+
         c.getDataTermino().getMes()+"/"+c.getDataTermino().getAno());
       System.out.println("Horario Inicio: ");
+      System.out.println(c.getHoraInicio().getHora()+":"+c.getHoraInicio().getMinuto());
       System.out.println("Horario Fim: ");
-
-
+      System.out.println(c.getHoraTermino().getHora()+":"+c.getHoraInicio().getMinuto());
       System.out.println("_________________________________");
     }
 

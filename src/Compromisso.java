@@ -3,16 +3,27 @@ public class Compromisso {
   private String nome;
   private Data dataInicio;
   private Data dataTermino;
-  private Horario horaInicio;
-  private Horario horaTermino;
+  private Horario horarioInicio;
+  private Horario horarioTermino;
 
+  // Sobrecarga dois metodos iguais com formas diferentes de instanciacao
   public Compromisso(String nome, Data dataInicio, Data dataTermino,
                      Horario horaInicio, Horario horaTermino) {
     this.nome = nome;
     this.dataInicio = dataInicio;
     this.dataTermino = dataTermino;
-    this.horaInicio = horaInicio;
-    this.horaTermino = horaTermino;
+    this.horarioInicio = horaInicio;
+    this.horarioTermino = horaTermino;
+    Agenda.addCompromisso(this);
+  }
+  public Compromisso(String nome, int diaDataInicial, int mesDataInicial, int anoDataInicial,
+                     int diaDataFinal, int mesDataFinal, int anoDataFinal,
+                     int horaInicial, int minutosInicial, int horaTermino, int minutosTermino) {
+    this.nome = nome;
+    this.dataInicio = new Data(diaDataInicial, mesDataInicial, anoDataInicial);
+    this.dataTermino =  new Data(diaDataFinal, mesDataFinal, anoDataFinal);
+    this.horarioInicio = new Horario(horaInicial,minutosInicial);
+    this.horarioTermino = new Horario(horaTermino, minutosTermino);
   }
 
   public String getNome() {
@@ -40,19 +51,19 @@ public class Compromisso {
   }
 
   public Horario getHoraInicio() {
-    return horaInicio;
+    return horarioInicio;
   }
 
   public void setHoraInicio(Horario horaInicio) {
-    this.horaInicio = horaInicio;
+    this.horarioInicio = horaInicio;
   }
 
   public Horario getHoraTermino() {
-    return horaTermino;
+    return horarioTermino;
   }
 
   public void setHoraTermino(Horario horaTermino) {
-    this.horaTermino = horaTermino;
+    this.horarioTermino = horaTermino;
   }
 
 }

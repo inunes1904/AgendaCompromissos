@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b8796d4-41bb-4ec4-9225-32d3c327814d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Agenda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Compromisso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Horario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Compromisso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Compromisso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +27,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2PForVWtMcGb5uGi7VTX6oKebaa" />
   <component name="ProjectViewState">
