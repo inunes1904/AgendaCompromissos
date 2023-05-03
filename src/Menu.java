@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Menu {
 
         boolean programOn = true;
-        public Scanner sc = new Scanner(System.in);
-        int op;
+        public static Scanner sc = new Scanner(System.in);
+        int op = -1;
 
         public Menu() {
 
@@ -43,8 +43,8 @@ public class Menu {
     try {
     System.out.println("----------------------------------------");
     System.out.print("Introduz o nome do compromisso: ");
+    sc.nextLine();
     String nomeCompromisso = sc.nextLine();
-    sc.next();
     System.out.print("Data de inicio no seguinte formato(d/m/A):");
     String[] dataInicio = sc.nextLine().split("/");
     System.out.print("Data de termino no formato(d/m/A): ");

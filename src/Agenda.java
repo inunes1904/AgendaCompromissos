@@ -6,25 +6,32 @@ public class Agenda {
 
   public static final List<Compromisso> listaCompromissos = new ArrayList<>();
 
-  // falta verificar se existe conflito
-  public static void addCompromisso(Compromisso comp){
+  public static void addCompromisso(Compromisso c){
     char resposta = 'n';
-    if (!verificarDisponibilidade()){
-        Scanner sc = new Scanner(System.in);
+    if (!verificarDisponibilidade(c)){
+
         System.out.println("\n\nO compromisso que pretende adicionar" +
                     " sobrepoe um compromisso já existente pretende continuar?\n" +
                             "(digite 's' para sim 'n' para não)");
-        resposta = sc.nextLine().toLowerCase().charAt(0);
-        sc.close();
+        resposta = Menu.sc.nextLine().toLowerCase().charAt(0);
+      System.out.println("\n\n\n"+resposta+"\n\n\n");
     }
-    if ( 's' == resposta || verificarDisponibilidade()){
-        listaCompromissos.add(comp);
+    if ( 's' ==  resposta || verificarDisponibilidade(c) ){
+        listaCompromissos.add(c);
     }
 
   }
 
-  private static boolean verificarDisponibilidade() {
-
+  private static boolean verificarDisponibilidade(Compromisso comp) {
+    for ( Compromisso c: listaCompromissos) {
+      if (comp.getDataInicio().getDia() == c.getDataInicio().getDia() &&
+        comp.getDataInicio().getMes() == c.getDataInicio().getMes() &&
+        comp.getDataInicio().getAno() == c.getDataInicio().getAno() &&
+        comp.getHoraInicio().getHora() == c.getHoraInicio().getHora() &&
+        comp.getHoraInicio().getMinuto() >= c.getHoraInicio().getMinuto() ){
+        return false;
+      }
+    }
     return true;
   }
 
